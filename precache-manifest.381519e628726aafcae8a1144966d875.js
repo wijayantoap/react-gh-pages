@@ -1,5 +1,9 @@
 self.__precacheManifest = [
   {
+    "revision": "cc846ebace26d266fceef34ec2ad0a75",
+    "url": "/wjynt/static/media/tavern.cc846eba.jpg"
+  },
+  {
     "revision": "5f9ca9ebfe0dd3f36557692641b43da4",
     "url": "/wjynt/static/media/maintenance.5f9ca9eb.jpg"
   },
@@ -20,19 +24,19 @@ self.__precacheManifest = [
     "url": "/wjynt/static/js/runtime~main.b2a189ce.js"
   },
   {
-    "revision": "97060a15da340fce862a",
-    "url": "/wjynt/static/js/main.1bc6ca82.chunk.js"
+    "revision": "86769c9ede9ab2ce5acf",
+    "url": "/wjynt/static/js/main.ef9ae8a0.chunk.js"
   },
   {
-    "revision": "c1106687b7b88ff069a8",
-    "url": "/wjynt/static/js/2.fd51df5c.chunk.js"
+    "revision": "0603c06d7fb824bd18a7",
+    "url": "/wjynt/static/js/2.3a7f49e7.chunk.js"
   },
   {
-    "revision": "97060a15da340fce862a",
-    "url": "/wjynt/static/css/main.6ea2de86.chunk.css"
+    "revision": "86769c9ede9ab2ce5acf",
+    "url": "/wjynt/static/css/main.6cee915e.chunk.css"
   },
   {
-    "revision": "7b66c0a732374c2bd60c1d4fc8f87dd1",
+    "revision": "282c7e66dc472dc2c81041bbb8e3633e",
     "url": "/wjynt/index.html"
   }
 ];
