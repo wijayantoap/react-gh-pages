@@ -38,10 +38,22 @@ export const Header__logo_box = styled.div`
     position: absolute;
     top: 1rem;
     left: 1rem;
+    
+    @media only screen and (max-width: 37.5em) {
+        /* top: .1rem;
+        left: .1rem; */
+        position: relative;
+        margin: 0 auto;
+    }
 `;
 
 export const Header__logo = styled.img`
     height: 15rem;
+
+    @media only screen and (max-width: 37.5em) {
+        margin-top: 10%;
+        height: 10rem;
+    }
 `;
 
 export const Header__text_box = styled.div`
