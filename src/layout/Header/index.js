@@ -27,10 +27,11 @@ export const Header = styled.div`
                 rgba(39, 60, 180, 0.8)),
             url(${img});
         }
-
-    /* @include respond(phone) {
-
-    } */
+        
+    @media only screen and (max-width: 37.5em) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
 `;
 
 export const Header__logo_box = styled.div`
