@@ -15,7 +15,6 @@ export const Header = styled.div`
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         -webkit-clip-path: polygon(0 0, 100% 3vh, 100% 100%, 0 100%);
         clip-path: polygon(0 0, 100% 3vh, 100% 100%, 0 100%);
-        height: 90vh;
     }
     
     @media (min-width: 192dpi) and (min-width: 37.5em),

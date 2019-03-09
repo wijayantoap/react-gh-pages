@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './pages/Home';
+// import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+
+import createHistory from 'history/createBrowserHistory';
+import Login from './pages/Login';
+import Page404 from './pages/Page404';
 
 class App extends Component {
   render() {
+    // const store = configureStore({ history });
     return (
       <div className="App">
         {/* <header className="App-header">
@@ -21,8 +28,17 @@ class App extends Component {
             Learn React
           </a>
         </header> */}
-        <Home />
+        <Router
+        basename={process.env.PUBLIC_URL}
+         >
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/login" component={Login} />
+            <Route component={() => <Page404 />} />
+          </Switch>
+        </Router>
       </div>
+
     );
   }
 }
