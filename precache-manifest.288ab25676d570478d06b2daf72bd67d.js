@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/wjynt/static/js/runtime~main.b2a189ce.js"
   },
   {
-    "revision": "e656ed90ac3897e3304a",
-    "url": "/wjynt/static/js/main.e2d2d951.chunk.js"
+    "revision": "dd48cab7043ed7327bfe",
+    "url": "/wjynt/static/js/main.26a3e348.chunk.js"
   },
   {
     "revision": "7fa654cc9fbbaaace2c9",
     "url": "/wjynt/static/js/2.0e8c4ba1.chunk.js"
   },
   {
-    "revision": "e656ed90ac3897e3304a",
+    "revision": "dd48cab7043ed7327bfe",
     "url": "/wjynt/static/css/main.6ea2de86.chunk.css"
   },
   {
-    "revision": "7dd6bbaddf11d841a880865b8ab88e25",
+    "revision": "8ae0d9097ed0275d46da12f2e0222b78",
     "url": "/wjynt/index.html"
   }
 ];
