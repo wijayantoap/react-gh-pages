@@ -17,8 +17,7 @@ class Home extends React.Component {
                         <HeadingPrimary>
                             <HeadingPrimary__main>UNDER CONSTRUCTION</HeadingPrimary__main>
                             <HeadingPrimary__sub>
-                                Coming soon, 
-                                <span style={{ color: '#1866e2' }}>&#123;</span>withStyle<span style={{ color: '#1866e2' }}>&#125;</span>
+                                Coming soon, <span style={{ color: '#1866e2' }}>&#123;</span>withStyle<span style={{ color: '#1866e2' }}>&#125;</span>
                             </HeadingPrimary__sub>
                         </HeadingPrimary>
                     </Header__text_box>
