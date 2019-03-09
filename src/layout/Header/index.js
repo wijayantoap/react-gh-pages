@@ -51,7 +51,7 @@ export const Header__logo = styled.img`
     height: 15rem;
 
     @media only screen and (max-width: 37.5em) {
-        margin-top: 10%;
+        margin-top: 5%;
         height: 10rem;
     }
 `;

@@ -17,10 +17,12 @@ export const HeadingPrimary__main = styled.span`
     animation-name: ${moveInLeft};
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    
+    @media only screen and (max-width: 56.25em) {
+        letter-spacing: 1rem;
+        font-size: 5rem
+    }
 
-    /* @include respond(phone {
-
-    }) */
     @media only screen and (max-width: 37.5em) {
         letter-spacing: 1rem;
         font-size: 3rem
@@ -33,6 +35,11 @@ export const HeadingPrimary__sub = styled.span`
     font-weight: 800;
     letter-spacing: 1rem;
     animation: ${moveInRight} 1s ease-out;
+
+    @media only screen and (max-width: 56.25em) {
+        letter-spacing: .5rem;
+        font-size: 2rem;
+    }
 
     @media only screen and (max-width: 37.5em) {
         letter-spacing: .5rem;
