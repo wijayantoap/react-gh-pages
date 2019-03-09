@@ -12,23 +12,27 @@ self.__precacheManifest = [
     "url": "/wjynt/static/media/logo-white.96979723.png"
   },
   {
+    "revision": "db6309f3494c81a5deff76b07de507ae",
+    "url": "/wjynt/static/media/image404.db6309f3.jpg"
+  },
+  {
     "revision": "ced55885e01013e6a448",
     "url": "/wjynt/static/js/runtime~main.b2a189ce.js"
   },
   {
-    "revision": "949cf356ffbf0458ae33",
-    "url": "/wjynt/static/js/main.48bc0c07.chunk.js"
+    "revision": "35e90280cd68075c63c9",
+    "url": "/wjynt/static/js/main.83e55fc4.chunk.js"
   },
   {
-    "revision": "ab5bc45969b76f1ea395",
-    "url": "/wjynt/static/js/2.0f1ccac5.chunk.js"
+    "revision": "c1106687b7b88ff069a8",
+    "url": "/wjynt/static/js/2.fd51df5c.chunk.js"
   },
   {
-    "revision": "949cf356ffbf0458ae33",
+    "revision": "35e90280cd68075c63c9",
     "url": "/wjynt/static/css/main.6ea2de86.chunk.css"
   },
   {
-    "revision": "c6fc20667d1f1530c819fe766f3faccc",
+    "revision": "a40391412130ebc59454b09464b31df7",
     "url": "/wjynt/index.html"
   }
 ];
