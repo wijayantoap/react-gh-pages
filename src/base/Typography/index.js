@@ -21,6 +21,9 @@ export const HeadingPrimary__main = styled.span`
     /* @include respond(phone {
 
     }) */
+    @media only screen and (max-width: 37.5em) {
+        letter-spacing: 1rem;
+    }
 `;
 
 export const HeadingPrimary__sub = styled.span`
@@ -28,5 +31,9 @@ export const HeadingPrimary__sub = styled.span`
     font-size: 2rem;
     font-weight: 800;
     letter-spacing: 1rem;
-    animation: ${moveInRight} 1s ease-out
+    animation: ${moveInRight} 1s ease-out;
+
+    @media only screen and (max-width: 37.5em) {
+        letter-spacing: .5rem;
+    }
 `;
