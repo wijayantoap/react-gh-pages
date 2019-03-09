@@ -23,6 +23,7 @@ export const HeadingPrimary__main = styled.span`
     }) */
     @media only screen and (max-width: 37.5em) {
         letter-spacing: 1rem;
+        font-size: 3rem
     }
 `;
 
@@ -35,5 +36,6 @@ export const HeadingPrimary__sub = styled.span`
 
     @media only screen and (max-width: 37.5em) {
         letter-spacing: .5rem;
+        font-size: .5rem;
     }
 `;
