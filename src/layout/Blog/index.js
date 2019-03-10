@@ -28,7 +28,6 @@ export const BlogSection = styled.div`
             url(${img});
         background-size: cover;
         background-repeat: no-repeat;
-        height: 60vh;
     }
 
     @media only screen and (max-width: 75em) {

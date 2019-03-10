@@ -68,6 +68,7 @@ class Blog extends React.Component {
             <div>
                 <BlogCover>
                     <BlogSection>
+                    <Link to={'/'}><Button style={{ marginTop: 8 }} background={'rgb(114, 68, 59, .4)'} color={'white'}>&larr; Back to Home</Button></Link>
                         <BlogList>
                             <div>
                                 <HeadingSecondary>Blog</HeadingSecondary>
@@ -82,7 +83,6 @@ class Blog extends React.Component {
                                 </div>
                             </div>
                         </BlogList>
-                        <Link to={'/'}><Button background={'rgb(114, 68, 59, .4)'} color={'white'}>&larr; Back to Home</Button></Link>
                     </BlogSection>
                 </BlogCover>
             </div>

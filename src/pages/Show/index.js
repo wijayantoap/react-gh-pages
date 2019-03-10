@@ -48,7 +48,7 @@ class Show extends React.Component {
                                 <HeadingSecondary>{this.state.blog.title}</HeadingSecondary>
                             </div>
                             <div>
-                            <div style={{ height: '55vh', overflowY: 'scroll', fontSize: 21 }}>
+                            <div style={{ height: '55vh', overflowY: 'scroll', fontSize: 16 }}>
                                 <p>{this.state.blog.content}</p>
                             </div>
                             </div>
