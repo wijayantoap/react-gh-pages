@@ -7,6 +7,10 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import createHistory from 'history/createBrowserHistory';
 import Login from './pages/Login';
+import Blog from './pages/Blog';
+import Create from './pages/Create';
+import Edit from './pages/Edit';
+import Show from './pages/Show';
 import Page404 from './pages/Page404';
 
 class App extends Component {
@@ -34,6 +38,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/create" component={Create} />
+            <Route path="/edit/:id" component={Edit} />
+            <Route path="/show/:id" component={Show} />
             <Route component={() => <Page404 />} />
           </Switch>
         </Router>

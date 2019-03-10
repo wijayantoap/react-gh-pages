@@ -55,6 +55,7 @@ class Login extends React.Component {
                                 value={this.state.password}
                                 onChange={this.handleChange('password')}
                                 variant="filled"
+                                type="password"
                                 />
                             </div>
                             <div>

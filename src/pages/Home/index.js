@@ -23,7 +23,7 @@ class Home extends React.Component {
                             </HeadingPrimary__sub>
                         </HeadingPrimary>
                         <div><Link to={'/login'}><Button>Click here if you are me</Button></Link></div>
-                        <div><Link to={'/blog'}><Button style={{ marginTop: 16 }} color={'white'} background={'#2998ff'}>or, Go to my blog</Button></Link></div>
+                        <div><Link to={'/blog'}><Button style={{ marginTop: 16 }} color={'white'} background={'#2998ff'}>Go to my blog</Button></Link></div>
                     </Header__text_box>
                 </Header>
             </div>

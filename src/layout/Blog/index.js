@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import img from '../../img/tavern.jpg'
+import img from '../../img/discover.jpeg'
 
-export const LoginSection = styled.div`
+export const BlogCover = styled.div`
     padding: 5rem 0;
     background-image: linear-gradient(to left top, rgb(114, 68, 59, .4), #72443b);
 `;
 
-export const FormSection = styled.div`
+export const BlogSection = styled.div`
     background-image: linear-gradient(
-        105deg, 
+        90deg, 
         rgba(255, 255, 255, .9) 0%, 
-        rgba(255, 255, 255, .9) 50%, 
+        rgba(255, 255, 255, .9) 58%, 
         transparent 50%),
         url(${img});
     background-size: 100%;
@@ -28,6 +28,7 @@ export const FormSection = styled.div`
             url(${img});
         background-size: cover;
         background-repeat: no-repeat;
+        height: 60vh;
     }
 
     @media only screen and (max-width: 75em) {
@@ -39,9 +40,9 @@ export const FormSection = styled.div`
     }
 `;
 
-export const Form = styled.form`
+export const BlogList = styled.div`
     width: 50%;
-    padding: 6rem;
+    padding: 0 3rem;
 
     @media only screen and (max-width: 56.25em) {
         width: 65%;
@@ -52,3 +53,29 @@ export const Form = styled.form`
         padding: 6rem 0;
     }
 `;
+
+export const BlogTitle = styled.a`
+    &, :link, :visited {
+        display: inline-block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: #777;
+        text-decoration: none;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+        background-size: 220%;
+        transition: all .4s;
+
+        span {
+            margin-right: 1.5rem;
+            display: inline-block;
+        }
+    }
+
+    :hover, :active {
+        background-position: 100%;
+        color: #72443b;
+        transform: translateX()1rem;
+    }
+`;
+
