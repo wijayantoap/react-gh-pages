@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../img/logo-white.png'
 import Grid from '@material-ui/core/Grid';
 import Dialog from '../Dialog';
+import { Link } from "react-router-dom";
 
 const Header = styled.div`
     display: block;
@@ -12,7 +12,7 @@ const Header = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 5rem;
+    /* height: 5rem; */
     z-index: 100;
     background-color: white;
     -webkit-box-shadow: ${props => props.boxShadow ? props.boxShadow : 'none'};
@@ -121,7 +121,7 @@ class ForumHeader extends React.Component {
                     <Container>
                         <Grid container alignItems="center" wrap="nowrap">                    
                             <Grid item>
-                                <img src={logo} style={{ backgroundColor: '#f9f9f9', width: '10rem', height: '5rem' }}/>
+                                <Link to="/forum" style={{ textDecoration: 'none', color: '#666' }}><span className="signature">wijayantoap</span></Link>
                             </Grid>
                             <Grid item style={{ flex: 1}} />
                             <Grid item>

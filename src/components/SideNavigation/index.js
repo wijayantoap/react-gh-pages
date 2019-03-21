@@ -6,10 +6,10 @@ import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
+import BubbleIcon from '@material-ui/icons/BubbleChart';
 import SendIcon from '@material-ui/icons/Send';
-import Star from '@material-ui/icons/Star';
+import StarIcon from '@material-ui/icons/Star';
+import StyleIcon from '@material-ui/icons/Style'
 import styled from 'styled-components';
 
 const styles = theme => ({
@@ -42,6 +42,8 @@ const Button = styled.div`
     font-size: 1.6rem;
     background-color: #444;
     border-radius: .5rem;
+    width: 19rem;
+    box-sizing: border-box;
 
     :hover {
         /* background-color: #f9f9f9; */
@@ -55,23 +57,23 @@ function ListItemComposition(props) {
     <Paper elevation={0}>
         <Button style={{ marginBottom: '1rem' }}>Start a discussion</Button>
         <MenuList>
-            <MenuItem className={classes.menuItem}>
+            <MenuItem className={classes.menuItem} data-page='all' onClick={props.navigationOnClick}>
             <ListItemIcon className={classes.icon}>
-                <SendIcon />
+                <BubbleIcon />
             </ListItemIcon>
-            <ListItemText classes={{ primary: classes.primary }} inset primary="Sent mail" />
+            <ListItemText classes={{ primary: classes.primary }} inset primary="All Discussions" />
             </MenuItem>
-            <MenuItem className={classes.menuItem}>
+            <MenuItem className={classes.menuItem} data-page='following' onClick={props.navigationOnClick}>
             <ListItemIcon className={classes.icon}>
-                <Star />
+                <StarIcon />
             </ListItemIcon>
-            <ListItemText classes={{ primary: classes.primary }} inset primary="Drafts" />
+            <ListItemText classes={{ primary: classes.primary }} inset primary="Following" />
             </MenuItem>
-            <MenuItem className={classes.menuItem}>
+            <MenuItem className={classes.menuItem} data-page='tag' onClick={props.navigationOnClick}>
             <ListItemIcon className={classes.icon}>
-                <InboxIcon />
+                <StyleIcon />
             </ListItemIcon>
-            <ListItemText classes={{ primary: classes.primary }} inset primary="Inbox" />
+            <ListItemText classes={{ primary: classes.primary }} inset primary="Tags" />
             </MenuItem>
         </MenuList>
     </Paper>
