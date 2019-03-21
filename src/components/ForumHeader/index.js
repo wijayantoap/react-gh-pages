@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../../img/logo-white.png'
 import Grid from '@material-ui/core/Grid';
+import Dialog from '../Dialog';
 
 const Header = styled.div`
     display: block;
@@ -11,13 +12,32 @@ const Header = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 48px;
-    z-index: 10;
+    height: 5rem;
+    z-index: 100;
+    background-color: white;
     -webkit-box-shadow: ${props => props.boxShadow ? props.boxShadow : 'none'};
     -moz-box-shadow: ${props => props.boxShadow ? props.boxShadow : 'none'};
     box-shadow: ${props => props.boxShadow ? props.boxShadow : 'none'};
     transition: 0.2s;
     border-bottom: 1px solid #e2e2e2;
+`;
+
+const Container = styled.div`
+    width: 110rem;
+    margin: 0 auto;
+
+    @media only screen and (max-width: 75em) {
+        width: 90rem;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+        width: 60rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        width: 40rem;
+    }
+    
 `;
 
 const Button = styled.div`
@@ -58,7 +78,8 @@ class ForumHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            boxShadow: 'none'
+            boxShadow: 'none',
+            open: false,
         }
     }
 
@@ -80,29 +101,38 @@ class ForumHeader extends React.Component {
                 boxShadow: 'none'
             })
         }
-        }
+    }
+
+    handleClickOpen = () => {
+        this.setState({
+          open: true,
+        });
+      };
+    
+    handleClose = value => {
+        this.setState({ selectedValue: value, open: false });
+    };
 
     render() {
     
         return(
             <div>
                 <Header className="header" boxShadow={this.state.boxShadow}>
-                    <Grid container alignItems="center" style={{ width: '110rem', margin: '0 auto' }}>                    
-                        <Grid item>
-                            <img src={logo} style={{ backgroundColor: '#f9f9f9', width: '10rem', height: '5rem' }}/>
+                    <Container>
+                        <Grid container alignItems="center" wrap="nowrap">                    
+                            <Grid item>
+                                <img src={logo} style={{ backgroundColor: '#f9f9f9', width: '10rem', height: '5rem' }}/>
+                            </Grid>
+                            <Grid item style={{ flex: 1}} />
+                            <Grid item>
+                                <Input placeholder="Search" style={{ marginRight: '1rem' }}/>
+                                <Button onClick={this.handleClickOpen}><span>Sign Up / Log In</span>
+                                </Button>
+                            </Grid>
                         </Grid>
-                        <Grid item style={{ flex: 1}} />
-                        <Grid item>
-                            <Input placeholder="Search" style={{ marginRight: '1rem' }}/>
-                            <Button style={{ marginRight: '1rem' }}><span>Sign Up</span></Button>
-                            <Button><span>Log In</span>
-                            </Button>
-                        </Grid>
-                    </Grid>
+                    </Container>
                 </Header>
-                <div className="forum" style={{ height: '1500rem' }}>
-
-                </div>
+                <Dialog open={this.state.open} onClose={this.handleClose}/>
             </div>
         );
     }
