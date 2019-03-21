@@ -43,6 +43,7 @@ class Show extends React.Component {
             <div>
                 <BlogCover>
                     <BlogSection>
+                        <Link to={'/blog'}><Button style={{ marginTop: 8 }} background={'rgb(114, 68, 59, .4)'} color={'white'}>&larr; Back to Blog</Button></Link>
                         <BlogList>
                             <div>
                                 <HeadingSecondary>{this.state.blog.title}</HeadingSecondary>
@@ -50,11 +51,11 @@ class Show extends React.Component {
                             <div>
                             <div style={{ height: '55vh', overflowY: 'scroll', fontSize: 16 }}>
                                 <p>{this.state.blog.content}</p>
+                                <p className="signature">wijayantoap</p>
                             </div>
                             </div>
                         </BlogList>
                         {/* <Button onClick={this.delete.bind(this, this.state.key)}>Delete</Button> */}
-                        <Link to={'/blog'}><Button background={'rgb(114, 68, 59, .4)'} color={'white'}>&larr; Back to Blog</Button></Link>
                     </BlogSection>
                 </BlogCover>
             </div>

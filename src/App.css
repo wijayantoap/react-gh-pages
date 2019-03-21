@@ -40,6 +40,11 @@ body {
   padding: 3rem;
 }
 
+.signature {
+  font-family: 'Pinyon Script', cursive;
+  text-align: right;
+}
+
 @media only screen and (max-width: 56.25em)  {
   body {
     padding: 0;

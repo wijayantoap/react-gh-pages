@@ -54,6 +54,7 @@ export const BlogList = styled.div`
 `;
 
 export const BlogTitle = styled.a`
+    border: 1px solid #72443b;
     &, :link, :visited {
         display: inline-block;
         font-size: 3rem;
