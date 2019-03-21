@@ -36,8 +36,12 @@ html {
   font-size: 62.5%;
 }
 
-body {
+.home {
   padding: 3rem;
+}
+
+.forum {
+  padding: 0 17rem;
 }
 
 .signature {

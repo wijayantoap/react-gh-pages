@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import createHistory from 'history/createBrowserHistory';
 import Login from './pages/Login';
+import Forum from './pages/Forum';
 import Blog from './pages/Blog';
 import Create from './pages/Create';
 import Edit from './pages/Edit';
@@ -38,6 +39,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
+            <Route path="/forum" component={Forum} />
             <Route path="/blog" component={Blog} />
             <Route path="/create" component={Create} />
             <Route path="/edit/:id" component={Edit} />
