@@ -143,7 +143,7 @@ class Home extends React.Component {
                 })
             } 
             
-            if (document.body.scrollTop > 1400 || document.documentElement.scrollTop > 1400) {
+            if (document.body.scrollTop > 1380 || document.documentElement.scrollTop > 1380) {
                 this.setState({
                     scrollColor: 'black'
                 })
