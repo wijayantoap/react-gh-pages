@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Header = styled.div`
     display: block;
@@ -42,7 +43,7 @@ class ForumHeader extends React.Component {
         super(props);
         this.state = {
             displayHeader: 'block',
-            open: false,
+            color: 'black',
         }
     }
 
@@ -55,14 +56,94 @@ class ForumHeader extends React.Component {
     }
 
     scrollFunction = () => {
-        if (document.body.scrollTop > 310 || document.documentElement.scrollTop > 310) {
-            this.setState({
-                displayHeader: 'none'
-            })
-        } else {
-            this.setState({
-                displayHeader: 'block'
-            })
+        if (window.innerHeight >= 900) {
+            if (document.body.scrollTop < 800 || document.documentElement.scrollTop < 800) {
+                this.setState({
+                    color: 'black'
+                })
+            } 
+            
+            if (document.body.scrollTop > 422 || document.documentElement.scrollTop > 422) {
+                this.setState({
+                    displayHeader: 'none'
+                })
+            } else {
+                this.setState({
+                    displayHeader: 'block'
+                })
+            }
+
+            if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+                this.setState({
+                    color: 'white'
+                })
+            } 
+
+            if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
+                this.setState({
+                    color: 'black'
+                })
+            }
+        } 
+
+        if (window.innerHeight > 715 && window.innerHeight < 900) {
+            if (document.body.scrollTop < 800 || document.documentElement.scrollTop < 800) {
+                this.setState({
+                    color: 'black'
+                })
+            } 
+            
+            if (document.body.scrollTop > 372 || document.documentElement.scrollTop > 372) {
+                this.setState({
+                    displayHeader: 'none'
+                })
+            } else {
+                this.setState({
+                    displayHeader: 'block'
+                })
+            }
+
+            if (document.body.scrollTop > 820 || document.documentElement.scrollTop > 820) {
+                this.setState({
+                    color: 'white'
+                })
+            } 
+
+            if (document.body.scrollTop > 1620 || document.documentElement.scrollTop > 1620) {
+                this.setState({
+                    color: 'black'
+                })
+            }
+        } 
+        
+        if (window.innerHeight < 715) {
+            if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 700) {
+                this.setState({
+                    color: 'black'
+                })
+            } 
+            
+            if (document.body.scrollTop > 322 || document.documentElement.scrollTop > 322) {
+                this.setState({
+                    displayHeader: 'none'
+                })
+            } else {
+                this.setState({
+                    displayHeader: 'block'
+                })
+            }
+
+            if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+                this.setState({
+                    color: 'white'
+                })
+            } 
+
+            if (document.body.scrollTop > 1400 || document.documentElement.scrollTop > 1400) {
+                this.setState({
+                    color: 'black'
+                })
+            }
         }
     }
 
@@ -72,11 +153,10 @@ class ForumHeader extends React.Component {
             <div>
                 <Header className="header" boxShadow={this.state.boxShadow}>
                     <Container>
-                        <Grid container alignItems="center" wrap="nowrap" justify="center">                    
-                            <Grid item>
-                                <Link to="/" style={{ textDecoration: 'none', color: 'white', display: `${this.state.displayHeader}` }}><span className="signature" style={{ fontSize: '4.7rem' }}>wijayantoap</span></Link>
-                            </Grid>
-                            {this.state.displayHeader === 'none' && <h1 style={{ fontFamily: 'Germania One, cursive', color: 'white', fontSize: '5rem', margin: 0 }}>Wijayanto A.P</h1>}
+                        <Grid container alignItems="center" wrap="nowrap" justify="center">
+                            <AnchorLink href='#things' style={{ textDecoration: 'none' }}>
+                            {this.state.displayHeader === 'none' && <span style={{ fontFamily: 'Pinyon Script, cursive', color: `${this.state.color}`, fontSize: '5rem' }}>Wijayanto A.P</span>}
+                            </AnchorLink>
                         </Grid>
                     </Container>
                 </Header>
