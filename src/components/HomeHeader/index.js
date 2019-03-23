@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const Header = styled.div`
     display: block;
     position: fixed;
-    padding: 0.8rem;
     margin: 0 auto;
     top: 0;
     left: 0;
