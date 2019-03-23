@@ -40,6 +40,12 @@ html {
   padding: 3rem;
 }
 
+@media only screen and (max-width: 56.25em)  {
+  .home {
+  padding: 0;
+  }
+}
+
 .forum {
   padding: 0 17rem;
 }

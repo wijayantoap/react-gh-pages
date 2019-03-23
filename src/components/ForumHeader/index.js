@@ -125,7 +125,7 @@ class ForumHeader extends React.Component {
                             </Grid>
                             <Grid item style={{ flex: 1}} />
                             <Grid item>
-                                <Input placeholder="Search" style={{ marginRight: '1rem' }}/>
+                                <Input placeholder="Search" style={{ marginRight: '1.5rem' }}/>
                                 <Button onClick={this.handleClickOpen}><span>Sign Up / Log In</span>
                                 </Button>
                             </Grid>
