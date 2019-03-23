@@ -139,7 +139,12 @@ class ForumHeader extends React.Component {
                 })
             } 
 
-            if (document.body.scrollTop > 1380 || document.documentElement.scrollTop > 1380) {
+            // if (document.body.scrollTop > 1340 || document.documentElement.scrollTop > 1340) {
+            //     this.setState({
+            //         color: 'black'
+            //     })
+            // }
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
                 this.setState({
                     color: 'black'
                 })

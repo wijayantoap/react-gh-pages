@@ -143,11 +143,11 @@ class Home extends React.Component {
                 })
             } 
             
-            if (document.body.scrollTop > 1380 || document.documentElement.scrollTop > 1380) {
-                this.setState({
-                    scrollColor: 'black'
-                })
-            }  
+            // if (document.body.scrollTop > 1340 || document.documentElement.scrollTop > 1340) {
+            //     this.setState({
+            //         scrollColor: 'black'
+            //     })
+            // }  
 
             if (document.body.scrollTop > 2100 || document.documentElement.scrollTop > 2100) {
                 this.setState({
@@ -155,11 +155,17 @@ class Home extends React.Component {
                 })
             }  
             
-            if (document.body.scrollTop > 2800 || document.documentElement.scrollTop > 2800) {
+            // if (document.body.scrollTop > 2800 || document.documentElement.scrollTop > 2800) {
+            //     this.setState({
+            //         scrollColor: 'black'
+            //     })
+            // }  
+
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
                 this.setState({
                     scrollColor: 'black'
                 })
-            }  
+            }
         }
     }
 
