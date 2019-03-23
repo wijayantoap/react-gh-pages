@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "a46347f772e97ac0a41d166efd6a26f4",
-    "url": "/static/media/junglefantasy.a46347f7.jpg"
+    "revision": "0ac96e85c44db5477c80b5f4ae5c5307",
+    "url": "/static/media/601997.0ac96e85.jpg"
   },
   {
-    "revision": "ce56dd37465aed6db8e3",
+    "revision": "fcd3843a6d2ef614125e",
     "url": "/static/css/main.b9d3ca86.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/static/media/maintenance.5f9ca9eb.jpg"
   },
   {
-    "revision": "ce56dd37465aed6db8e3",
-    "url": "/static/js/main.3b252030.chunk.js"
+    "revision": "fcd3843a6d2ef614125e",
+    "url": "/static/js/main.e1c6bffe.chunk.js"
   },
   {
     "revision": "f4fde3d95b76dcea86e1718897ed0623",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/static/media/rockstatues.61309870.jpg"
   },
   {
-    "revision": "b4a2037262e8c7f3ce1d9eec6a8a2d6f",
-    "url": "/static/media/shipsealight.b4a20372.jpg"
+    "revision": "a46347f772e97ac0a41d166efd6a26f4",
+    "url": "/static/media/junglefantasy.a46347f7.jpg"
   },
   {
     "revision": "db6309f3494c81a5deff76b07de507ae",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/static/media/logo-white.96979723.png"
   },
   {
-    "revision": "a75fc12f2ddd4139ca5c0eb55f49b544",
+    "revision": "227c7f9247a8713eb10f3c8c0cb8da04",
     "url": "/index.html"
   }
 ];
