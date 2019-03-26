@@ -56,6 +56,14 @@ html {
   font-size: 3rem;
 }
 
+.pressstartfont {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 5rem;
+  background: -webkit-linear-gradient(rgb(123, 16, 223), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media only screen and (max-width: 56.25em)  {
   body {
     padding: 0;

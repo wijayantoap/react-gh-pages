@@ -1,23 +1,19 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-
-import { Header, Header__logo_box, Header__logo, Header__text_box } from '../../layout/Header';
-import { HeadingPrimary, HeadingPrimary__main, HeadingPrimary__sub } from '../../base/Typography';
 import HomeHeader from '../../components/HomeHeader';
 
-import logo from '../../img/logo-white.png'
-import { Button } from '../../components/Button';
-
-import wallpaper1 from '../../img/whiteabstract.jpg';
-import wallpaper2 from '../../img/nightwindow.jpg';
-import wallpaper3 from '../../img/lonetree.jpg';
-import wallpaper4 from '../../img/rockstatues.jpg';
-import wallpaper5 from '../../img/junglefantasy.jpg';
+import wallpaper1 from '../../img/nightcityvector.jpg';
+import wallpaper2 from '../../img/dubaivector.jpg';
+import wallpaper3 from '../../img/moderncity.jpg';
+import wallpaper4 from '../../img/nightcity.jpg';
+import facebook from '../../img/facebookpixel.jpg';
+import twitter from '../../img/twitterpixel.png';
+import instagram from '../../img/instagrampixel.png';
 
 import ProgressBar from "react-scroll-progress-bar";
 import LazyHero from 'react-lazy-hero';
 
-import '../../stars.css'
+import '../../stars.css';
+import './index.css';
 
 class Home extends React.Component {
     constructor(props) {
@@ -39,11 +35,6 @@ class Home extends React.Component {
 
     scrollFunction = () => {
         if (window.innerHeight >= 900) {
-            if (document.body.scrollTop < 800 || document.documentElement.scrollTop < 800) {
-                this.setState({
-                    scrollColor: 'black'
-                })
-            } 
 
             if (document.body.scrollTop > 422 || document.documentElement.scrollTop > 422) {
                 this.setState({
@@ -51,38 +42,16 @@ class Home extends React.Component {
                 })
             } else {
                 this.setState({
-                    displayHeader: 'block'
+                    displayHeader: 'block',
+                    scrollColor: 'black'
                 })
             }
-
-            if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-                this.setState({
-                    scrollColor: 'white'
-                })
-            } 
-            
-            if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
-                this.setState({
-                    scrollColor: 'black'
-                })
-            }  
-
-            if (document.body.scrollTop > 2700 || document.documentElement.scrollTop > 2700) {
-                this.setState({
-                    scrollColor: 'blue'
-                })
-            }  
-            
-            if (document.body.scrollTop > 3600 || document.documentElement.scrollTop > 3600) {
-                this.setState({
-                    scrollColor: 'black'
-                })
-            }  
         } 
+        
         if (window.innerHeight > 715 && window.innerHeight < 900) {
             if (document.body.scrollTop < 900 || document.documentElement.scrollTop < 900) {
                 this.setState({
-                    scrollColor: 'black'
+                    scrollColor: 'rgb(123, 16, 223)'
                 })
             } 
 
@@ -95,35 +64,11 @@ class Home extends React.Component {
                     displayHeader: 'block'
                 })
             }
-
-            if (document.body.scrollTop > 820 || document.documentElement.scrollTop > 820) {
-                this.setState({
-                    scrollColor: 'white'
-                })
-            } 
-            
-            if (document.body.scrollTop > 1620 || document.documentElement.scrollTop > 1620) {
-                this.setState({
-                    scrollColor: 'black'
-                })
-            }  
-
-            if (document.body.scrollTop > 2470 || document.documentElement.scrollTop > 2470) {
-                this.setState({
-                    scrollColor: 'blue'
-                })
-            }  
-            
-            if (document.body.scrollTop > 3270 || document.documentElement.scrollTop > 3270) {
-                this.setState({
-                    scrollColor: 'black'
-                })
-            }  
         }
         if (window.innerHeight < 715) {
             if (document.body.scrollTop < 700 || document.documentElement.scrollTop < 700) {
                 this.setState({
-                    scrollColor: 'black'
+                    scrollColor: 'rgb(123, 16, 223)'
                 })
             } 
 
@@ -136,69 +81,86 @@ class Home extends React.Component {
                     displayHeader: 'block'
                 })
             }
-
-            if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-                this.setState({
-                    scrollColor: 'white'
-                })
-            } 
-            
-            // if (document.body.scrollTop > 1340 || document.documentElement.scrollTop > 1340) {
-            //     this.setState({
-            //         scrollColor: 'black'
-            //     })
-            // }  
-
-            if (document.body.scrollTop > 2100 || document.documentElement.scrollTop > 2100) {
-                this.setState({
-                    scrollColor: 'blue'
-                })
-            }  
-            
-            // if (document.body.scrollTop > 2800 || document.documentElement.scrollTop > 2800) {
-            //     this.setState({
-            //         scrollColor: 'black'
-            //     })
-            // }  
-
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                this.setState({
-                    scrollColor: 'black'
-                })
-            }
         }
+
+        // if (window.innerHeight < 650) {
+        //     if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
+        //     this.setState({
+        //         scrollColor: 'red'
+        //     })
+        //     } 
+        // }
     }
 
     render() {
         return(
             <div>
                 <HomeHeader />
-                <ProgressBar height="6px" bgcolor={this.state.scrollColor} style={{ top: 50 }}/>
-                <div id='things'>
-                <LazyHero imageSrc={wallpaper1} opacity="0" minHeight="100vh" parallaxOffset="100" transitionDuration="1000">
-                    <span style={{ fontFamily: 'Pinyon Script, cursive', color: 'black', fontSize: '5rem', display: `${this.state.displayHeader}` }}>Wijayanto A.P</span>
-                </LazyHero>
+                <ProgressBar height="6px" bgcolor={this.state.scrollColor} style={{ top: 50, zIndex: 100 }}/>
+                <div id='things' style={{ marginBottom: 5 }}>
+                    <LazyHero imageSrc={wallpaper1} opacity="0" minHeight="100vh" parallaxOffset="100" transitionDuration="1000">
+                        <span class="pressstartfont" data-aos="fade-in" style={{ fontSize: '5rem', display: `${this.state.displayHeader}` }}>Wijayanto A.P</span>
+                        <div class="loader">Loading...</div>
+                    </LazyHero>
                 </div>
-                <div>
-                <LazyHero imageSrc={wallpaper2} opacity=".2" minHeight="100vh" isFixed="true" transitionDuration="2000" transitionTimingFunction="ease-in-out">
-                </LazyHero>
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
+                <div style={{ backgroundImage: `url(${wallpaper4})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', padding: '50px 0 50px 0' }} >
+                    
+                    
+                    <div class="item item--primary"
+                        data-aos="fade-right"
+                        data-aos-anchor="#trigger-twitter"
+                        data-aos-anchor-placement="center-center">
+                        <a href="https://twitter.com/wijayantoap" target="_blank">
+                        <img src={twitter} style={{ width: 150, height: 150 }} />
+                    </a>
+                    </div>
+
+                    <div class="item item--secondary"
+                        data-aos="fade-right"
+                        data-aos-anchor="#trigger-fb"
+                        data-aos-anchor-placement="center-center">
+                        <a href="https://www.facebook.com/wizzone" target="_blank">
+                        <img src={facebook} style={{ width: 150, height: 150 }} />
+                    </a>
+                    </div>
+                    <div class="item item--secondary"
+                        data-aos="fade-right"
+                        data-aos-anchor="#trigger-insta"
+                        data-aos-anchor-placement="center-center">
+                        <a href="https://www.instagram.com/wijayantoap/" target="_blank">
+                        <img src={instagram} style={{ width: 150, height: 150 }} />
+                    </a>
+                    </div>
+
+                    <div class="pressstartfont" style={{ margin: '0px auto 0 auto', textAlign: 'center',
+                    background: '-webkit-linear-gradient(red, #333)',
+                    '-webkit-background-clip': 'text',
+                    '-webkit-text-fill-color': 'transparent' }}>Get in touch</div>
+
+                    <div id="trigger-fb" class="pressstartfont" style={{ margin: '500px auto 0 auto', textAlign: 'center',
+                    background: '-webkit-linear-gradient(#333, blue)',
+                    '-webkit-background-clip': 'text',
+                    '-webkit-text-fill-color': 'transparent' }}>&larr;Send your best memes here</div>
+
+                    <div id="trigger-twitter" class="pressstartfont" style={{ margin: '500px auto 500px auto', textAlign: 'center',
+                    background: '-webkit-linear-gradient(#333, lightskyblue)',
+                    '-webkit-background-clip': 'text',
+                    '-webkit-text-fill-color': 'transparent' }}>No one using this but whatever&rarr;</div>
+
+                    <div id="trigger-insta" class="pressstartfont" style={{ margin: '500px auto 500px auto', textAlign: 'center',
+                    background: '-webkit-linear-gradient(#333, lightcoral)',
+                    '-webkit-background-clip': 'text',
+                    '-webkit-text-fill-color': 'transparent' }}>&larr;Might as well putting this</div>
+
+                    <div class="pressstartfont" style={{ margin: '500px auto 300px auto', textAlign: 'center',
+                    background: '-webkit-linear-gradient(#333, #0259e5)',
+                    '-webkit-background-clip': 'text',
+                    '-webkit-text-fill-color': 'transparent' }}><a href="https://www.linkedin.com/in/wijayantoap/" target="_blank">Click here to visit my linked in</a></div>
+                    <div id="stars"></div>
+                    <div id="stars2"></div>
+                    <div id="stars3"></div>
                 </div>
-                <div>
-                <LazyHero imageSrc={wallpaper3} opacity="0" minHeight="100vh">
-                </LazyHero>
-                </div>
-                {/* <div>
-                <LazyHero imageSrc={wallpaper4} opacity="0" minHeight="100vh">
-                </LazyHero>
-                </div>
-                <div>
-                <LazyHero imageSrc={wallpaper5} opacity="0" minHeight="100vh">
-                </LazyHero>
-                </div> */}
-                </div>
+            </div>
         );
     }
 }

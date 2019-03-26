@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import { Link } from "react-router-dom";
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
+import './index.css';
+
 const Header = styled.div`
     display: block;
     position: fixed;
@@ -11,13 +13,9 @@ const Header = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
-    background-color: ${props => props.displayHeader && 'red'};
-    -webkit-box-shadow: ${props => props.boxShadow ? props.boxShadow : 'none'};
-    -moz-box-shadow: ${props => props.boxShadow ? props.boxShadow : 'none'};
-    box-shadow: ${props => props.boxShadow ? props.boxShadow : 'none'};
+    z-index: 10;
+    background-color: ${props => props.backgroundColor};
     transition: 0.2s;
-    border-bottom: 1px solid #e2e2e2;
 `;
 
 const Container = styled.div`
@@ -44,6 +42,7 @@ class ForumHeader extends React.Component {
         this.state = {
             displayHeader: 'block',
             color: 'black',
+            backgroundColor: 'transparent'
         }
     }
 
@@ -59,29 +58,17 @@ class ForumHeader extends React.Component {
         if (window.innerHeight >= 900) {
             if (document.body.scrollTop < 800 || document.documentElement.scrollTop < 800) {
                 this.setState({
-                    color: 'black'
+                    color: 'black',
                 })
             } 
             
-            if (document.body.scrollTop > 422 || document.documentElement.scrollTop > 422) {
+            if (document.body.scrollTop > 322 || document.documentElement.scrollTop > 322) {
                 this.setState({
                     displayHeader: 'none'
                 })
             } else {
                 this.setState({
                     displayHeader: 'block'
-                })
-            }
-
-            if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-                this.setState({
-                    color: 'white'
-                })
-            } 
-
-            if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
-                this.setState({
-                    color: 'black'
                 })
             }
         } 
@@ -102,18 +89,6 @@ class ForumHeader extends React.Component {
                     displayHeader: 'block'
                 })
             }
-
-            if (document.body.scrollTop > 820 || document.documentElement.scrollTop > 820) {
-                this.setState({
-                    color: 'white'
-                })
-            } 
-
-            if (document.body.scrollTop > 1620 || document.documentElement.scrollTop > 1620) {
-                this.setState({
-                    color: 'black'
-                })
-            }
         } 
         
         if (window.innerHeight < 715) {
@@ -132,23 +107,14 @@ class ForumHeader extends React.Component {
                     displayHeader: 'block'
                 })
             }
+        }
 
-            if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-                this.setState({
-                    color: 'white'
-                })
+        if (window.innerHeight < 650) {
+            if (document.body.scrollTop > 1300 || document.documentElement.scrollTop > 1300) {
+            this.setState({
+                color: 'black'
+            })
             } 
-
-            // if (document.body.scrollTop > 1340 || document.documentElement.scrollTop > 1340) {
-            //     this.setState({
-            //         color: 'black'
-            //     })
-            // }
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                this.setState({
-                    color: 'black'
-                })
-            }
         }
     }
 
@@ -156,12 +122,14 @@ class ForumHeader extends React.Component {
     
         return(
             <div>
-                <Header className="header" boxShadow={this.state.boxShadow}>
+                <Header className="header" backgroundColor={this.state.backgroundColor}>
                     <Container>
                         <Grid container alignItems="center" wrap="nowrap" justify="center">
+                        <div className="color-change-2x">
                             <AnchorLink href='#things' style={{ textDecoration: 'none' }}>
-                            {this.state.displayHeader === 'none' && <span style={{ fontFamily: 'Pinyon Script, cursive', color: `${this.state.color}`, fontSize: '5rem' }}>Wijayanto A.P</span>}
+                            {this.state.displayHeader === 'none' && <span className="pressstartfont">Wijayanto A.P</span>}
                             </AnchorLink>
+                            </div>
                         </Grid>
                     </Container>
                 </Header>
