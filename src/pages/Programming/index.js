@@ -13,7 +13,7 @@ class Programming extends React.Component {
                     </div>
                     <div className="contentactionprogramming">
                         <a href="#" className="actionpoppins">Portfolio</a>
-                        <a href="#" className="actionpoppins">About</a>
+                        <a href="/aboutme" className="actionpoppins">About</a>
                         <a href="/blogbutdontgonow" className="actionpoppins catprogramming">Blog</a>
                     </div>
                 </div>

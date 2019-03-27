@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import createHistory from 'history/createBrowserHistory';
+import AboutMe from './pages/AboutMe';
 import Login from './pages/Login';
 import Forum from './pages/Forum';
 import Blog from './pages/Blog';
@@ -35,6 +36,7 @@ class App extends Component {
         basename={process.env.PUBLIC_URL}
          >
           <Switch>
+            <Route path="/aboutme" component={AboutMe} />
             <Route exact path="/" component={Programming} />
             <Route path="/login" component={Login} />
             <Route path="/forum" component={Forum} />
