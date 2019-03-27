@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "30e5a38ef2c4e7b9e446",
-    "url": "/static/css/main.d996cbe9.chunk.css"
+    "revision": "d228c363fb5a62063dac",
+    "url": "/static/css/main.d55ee4cf.chunk.css"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/static/media/tavern.cc846eba.jpg"
   },
   {
-    "revision": "30e5a38ef2c4e7b9e446",
+    "revision": "d228c363fb5a62063dac",
     "url": "/static/js/main.d379cefc.chunk.js"
   },
   {
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.b35f471c.chunk.css"
   },
   {
-    "revision": "f9aa63f6fafc6559d0e65f97dfb62ad2",
+    "revision": "f06e7a65a4411cda8f63c63b0210f796",
     "url": "/index.html"
   }
 ];
