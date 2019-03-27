@@ -3,6 +3,22 @@ import './index.css'
 import './animation.css'
 
 class Programming extends React.Component {
+    componentDidMount() {
+        document.body.classList.add('js-loading');
+
+        window.addEventListener("load", showPage);
+
+        function showPage() {
+        document.body.classList.remove('js-loading');
+        }
+
+        var img = document.querySelector("div");
+        document.body.classList.add('js-loading');
+        img.addEventListener("load", removeLoadingClass);
+        function removeLoadingClass() {
+        document.body.classList.remove('js-loading');
+        }
+    }
     render() {
         return(
             <div className="mainprogramming poppinsfont">

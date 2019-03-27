@@ -93,3 +93,9 @@
     color: white;
     background-size: 100% 2px;
   }
+
+  @media only screen and (max-width: 56.25em) {
+    #contentaboutme {
+        width: 80%;
+    }
+  }
