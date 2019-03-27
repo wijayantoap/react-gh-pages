@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/nightcityvector.a938900b.jpg"
   },
   {
-    "revision": "3cb68e5e344b2e55e086",
+    "revision": "c63d47c4296c4fef8b20",
     "url": "/static/css/main.bf1cdbf1.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/static/media/logo.5d5d9eef.svg"
   },
   {
-    "revision": "3cb68e5e344b2e55e086",
-    "url": "/static/js/main.c8afbcdc.chunk.js"
+    "revision": "c63d47c4296c4fef8b20",
+    "url": "/static/js/main.33a5fd7b.chunk.js"
   },
   {
     "revision": "e1449fc79a6237dab8b83b3b5b294d68",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/static/css/2.b35f471c.chunk.css"
   },
   {
-    "revision": "9d464b306b3dd0b75e98b349889db7d8",
+    "revision": "42e1831561c4db26b93aaf364e6cc11a",
     "url": "/index.html"
   }
 ];
