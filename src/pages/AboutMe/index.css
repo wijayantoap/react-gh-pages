@@ -62,3 +62,34 @@
     color: blue;
 }
 
+#navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 100;
+  }
+  
+  #navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    background-image: linear-gradient(black, white);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    transition: 2s;
+  }
+  
+  #navbar a:hover {
+    background-color: black;
+    color: white;
+    background-size: 100% 2px;
+  }

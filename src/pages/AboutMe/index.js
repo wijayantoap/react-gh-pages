@@ -4,12 +4,27 @@ import './animation.css'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 class AboutMe extends React.Component {
+    componentDidMount() {
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+        }
+    }
     render() {
         return(
             <div>
+                <div id="navbar">
+                    <a className="tracking-in-expand" href="/">Home</a>
+                </div>
                 <div className="headeraboutme">
                     <div className="heroaboutme poppinsfont">
-                        <h1 className="h1aboutme">Hi, I am Tito</h1>
+                        <h1 className="h1aboutme text-focus-in">Hi, I am Tito</h1>
                         <AnchorLink  className="heroaboutmescroll ping" href='#contentaboutme' style={{ textDecoration: 'none' }}>
                         <span>scroll down</span>
                         </AnchorLink>
