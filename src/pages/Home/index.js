@@ -15,6 +15,8 @@ import LazyHero from 'react-lazy-hero';
 import '../../stars.css';
 import './index.css';
 
+import { MobileView } from "react-device-detect";
+
 class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -99,36 +101,37 @@ class Home extends React.Component {
                 <ProgressBar height="6px" bgcolor={this.state.scrollColor} style={{ top: 50, zIndex: 100 }}/>
                 <div id='things' style={{ marginBottom: 5 }}>
                     <LazyHero imageSrc={wallpaper1} opacity="0" minHeight="100vh" parallaxOffset="100" transitionDuration="1000">
-                        <span class="pressstartfont" data-aos="fade-in" style={{ fontSize: '5rem', display: `${this.state.displayHeader}` }}>Wijayanto A.P</span>
+                        <span class="pressstartfont text-flicker-in-glow" data-aos="fade-in" style={{ display: `${this.state.displayHeader}` }}>Wijayanto A.P</span>
                         <div class="loader">Loading...</div>
+                            <span style={{ color: 'white' }}>Just trying out few things here, will be changed soon</span>
                     </LazyHero>
                 </div>
-                <div style={{ backgroundImage: `url(${wallpaper4})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', padding: '50px 0 50px 0' }} >
+                <div className="main" style={{ backgroundImage: `url(${wallpaper4})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', padding: '50px 0 50px 0' }} >
                     
                     
                     <div class="item item--primary"
                         data-aos="fade-right"
                         data-aos-anchor="#trigger-twitter"
-                        data-aos-anchor-placement="center-center">
-                        <a href="https://twitter.com/wijayantoap" target="_blank">
-                        <img src={twitter} style={{ width: 150, height: 150 }} />
+                        data-aos-anchor-placement="center-bottom">
+                        <a href="https://twitter.com/wijayantoap" target="_blank" rel="noopener noreferrer">
+                        <img className="img" src={twitter} alt="twitter"/>
                     </a>
                     </div>
 
                     <div class="item item--secondary"
                         data-aos="fade-right"
                         data-aos-anchor="#trigger-fb"
-                        data-aos-anchor-placement="center-center">
-                        <a href="https://www.facebook.com/wizzone" target="_blank">
-                        <img src={facebook} style={{ width: 150, height: 150 }} />
+                        data-aos-anchor-placement="center-bottom">
+                        <a href="https://www.facebook.com/wizzone" target="_blank" rel="noopener noreferrer">
+                        <img className="img" src={facebook} alt="facebook" />
                     </a>
                     </div>
-                    <div class="item item--secondary"
+                    <div class="item item--tertiary"
                         data-aos="fade-right"
                         data-aos-anchor="#trigger-insta"
-                        data-aos-anchor-placement="center-center">
-                        <a href="https://www.instagram.com/wijayantoap/" target="_blank">
-                        <img src={instagram} style={{ width: 150, height: 150 }} />
+                        data-aos-anchor-placement="center-bottom">
+                        <a href="https://www.instagram.com/wijayantoap/" target="_blank" rel="noopener noreferrer">
+                        <img className="img" src={instagram}  alt="insta" />
                     </a>
                     </div>
 
@@ -140,22 +143,22 @@ class Home extends React.Component {
                     <div id="trigger-fb" class="pressstartfont" style={{ margin: '500px auto 0 auto', textAlign: 'center',
                     background: '-webkit-linear-gradient(#333, blue)',
                     '-webkit-background-clip': 'text',
-                    '-webkit-text-fill-color': 'transparent' }}>&larr;Send your best memes here</div>
+                    '-webkit-text-fill-color': 'transparent' }}>Send your best memes here</div>
 
                     <div id="trigger-twitter" class="pressstartfont" style={{ margin: '500px auto 500px auto', textAlign: 'center',
                     background: '-webkit-linear-gradient(#333, lightskyblue)',
                     '-webkit-background-clip': 'text',
-                    '-webkit-text-fill-color': 'transparent' }}>No one using this but whatever&rarr;</div>
+                    '-webkit-text-fill-color': 'transparent' }}>No one using this but whatever</div>
 
                     <div id="trigger-insta" class="pressstartfont" style={{ margin: '500px auto 500px auto', textAlign: 'center',
                     background: '-webkit-linear-gradient(#333, lightcoral)',
                     '-webkit-background-clip': 'text',
-                    '-webkit-text-fill-color': 'transparent' }}>&larr;Might as well putting this</div>
+                    '-webkit-text-fill-color': 'transparent' }}>Might as well putting this</div>
 
                     <div class="pressstartfont" style={{ margin: '500px auto 300px auto', textAlign: 'center',
                     background: '-webkit-linear-gradient(#333, #0259e5)',
                     '-webkit-background-clip': 'text',
-                    '-webkit-text-fill-color': 'transparent' }}><a href="https://www.linkedin.com/in/wijayantoap/" target="_blank">Click here to visit my linked in</a></div>
+                    '-webkit-text-fill-color': 'transparent' }}><a href="https://www.linkedin.com/in/wijayantoap/" target="_blank" rel="noopener noreferrer">Click here to visit my linked in</a></div>
                     <div id="stars"></div>
                     <div id="stars2"></div>
                     <div id="stars3"></div>

@@ -11,6 +11,7 @@
     "pexels-api-wrapper": "^1.1.1",
     "react": "^16.8.4",
     "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-device-detect": "^1.6.2",
     "react-dom": "^16.8.4",
     "react-graceful-image": "^1.2.9",
     "react-lazy-hero": "^2.0.0",

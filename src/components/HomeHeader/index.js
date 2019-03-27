@@ -80,7 +80,7 @@ class ForumHeader extends React.Component {
                 })
             } 
             
-            if (document.body.scrollTop > 372 || document.documentElement.scrollTop > 372) {
+            if (document.body.scrollTop > 280 || document.documentElement.scrollTop > 280) {
                 this.setState({
                     displayHeader: 'none'
                 })
@@ -98,7 +98,7 @@ class ForumHeader extends React.Component {
                 })
             } 
             
-            if (document.body.scrollTop > 322 || document.documentElement.scrollTop > 322) {
+            if (document.body.scrollTop > 210 || document.documentElement.scrollTop > 210) {
                 this.setState({
                     displayHeader: 'none'
                 })
