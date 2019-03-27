@@ -11,6 +11,7 @@ import Forum from './pages/Forum';
 import Blog from './pages/Blog';
 import Create from './pages/Create';
 import Edit from './pages/Edit';
+import Programming from './pages/Programming';
 import Show from './pages/Show';
 import Page404 from './pages/Page404';
 import AOS from 'aos';
@@ -34,12 +35,13 @@ class App extends Component {
         basename={process.env.PUBLIC_URL}
          >
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Programming} />
             <Route path="/login" component={Login} />
             <Route path="/forum" component={Forum} />
             <Route path="/blog" component={Blog} />
             <Route path="/create" component={Create} />
             <Route path="/edit/:id" component={Edit} />
+            <Route path="/programming" component={Programming} />
             <Route path="/show/:id" component={Show} />
             <Route component={() => <Page404 />} />
           </Switch>

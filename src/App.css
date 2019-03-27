@@ -64,6 +64,11 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+.poppinsfont {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
 @media only screen and (max-width: 56.25em)  {
   body {
     padding: 0;

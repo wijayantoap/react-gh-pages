@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import img from '../../img/image404.jpg'
 
 export const Header404 = styled.div`
-    height: 95vh;
+    height: 100vh;
     background-image: linear-gradient(
         to right bottom,
         rgba(68, 70, 73, 0.8),

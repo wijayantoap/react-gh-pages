@@ -101,12 +101,12 @@ class Home extends React.Component {
                 <ProgressBar height="6px" bgcolor={this.state.scrollColor} style={{ top: 50, zIndex: 100 }}/>
                 <div id='things' style={{ marginBottom: 5 }}>
                     <LazyHero imageSrc={wallpaper1} opacity="0" minHeight="100vh" parallaxOffset="100" transitionDuration="1000">
-                        <span class="pressstartfont text-flicker-in-glow" data-aos="fade-in" style={{ display: `${this.state.displayHeader}` }}>Wijayanto A.P</span>
+                        <span class="pressstartfont text-flicker-in-glow" style={{ display: `${this.state.displayHeader}` }}>Wijayanto A.P</span>
                         <div class="loader">Loading...</div>
                             <span style={{ color: 'white' }}>Just trying out few things here, will be changed soon</span>
                     </LazyHero>
                 </div>
-                <div className="main" style={{ backgroundImage: `url(${wallpaper4})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', padding: '50px 0 50px 0' }} >
+                <div className="main" style={{ backgroundImage: `url(${wallpaper4})`}} >
                     
                     
                     <div class="item item--primary"
