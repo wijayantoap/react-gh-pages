@@ -12,6 +12,7 @@ import Forum from './pages/Forum';
 import Blog from './pages/Blog';
 import Create from './pages/Create';
 import Edit from './pages/Edit';
+import MarqueeText from './pages/MarqueeText';
 import Programming from './pages/Programming';
 import Show from './pages/Show';
 import Page404 from './pages/Page404';
@@ -37,7 +38,8 @@ class App extends Component {
          >
           <Switch>
             <Route path="/aboutme" component={AboutMe} />
-            <Route exact path="/" component={Programming} />
+            <Route path="/marqueetext" component={MarqueeText} />
+            <Route exact path="/" component={MarqueeText} />
             <Route path="/login" component={Login} />
             <Route path="/forum" component={Forum} />
             <Route path="/blog" component={Blog} />

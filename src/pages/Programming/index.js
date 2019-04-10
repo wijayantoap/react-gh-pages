@@ -19,9 +19,24 @@ class Programming extends React.Component {
     //     document.body.classList.remove('js-loading');
     //     }
     // }
+
+    state = {
+        imageLoading : false
+    }
+
+    handleImageLoaded = () => {
+        this.setState({
+            imageLoading: !this.state.imageLoading
+        })
+        // alert('done');
+    }
+
+    componentDidMount() {
+        
+    }
     render() {
         return(
-            <div className="mainprogramming poppinsfont">
+            <div className="mainprogramming poppinsfont" onLoad={this.handleImageLoaded()}>
                 <div className="contentprogramming">
                     <div>
                         <h1 className="h1poppins text-focus-in">Wijayanto Abdurrahman Prawirodirjo</h1>
