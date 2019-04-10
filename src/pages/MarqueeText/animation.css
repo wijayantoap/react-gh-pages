@@ -21,7 +21,7 @@
   .marquee-top {
     display: inline-block;
     text-indent: 0;
-    margin-left: 100px;
+    margin-left: 10%;
     color: white;    
     font-size: 48px;
     animation: marquee-top 3s linear infinite; /* here you select the animation */
