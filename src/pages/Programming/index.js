@@ -16,7 +16,7 @@ class Programming extends React.Component {
                     <div className="contentactionprogramming scale-in-hor-right">
                         <a href="#" className="actionpoppins">Portfolio</a>
                         <a href="/aboutme" className="actionpoppins">About</a>
-                        <a href="/blogbutdontgonow" className="actionpoppins catprogramming">Blog</a>
+                        <a href="https://blog.wijayantoap.now.sh/" className="actionpoppins catprogramming">Blog</a>
                     </div>
                 </div>
             </div>
