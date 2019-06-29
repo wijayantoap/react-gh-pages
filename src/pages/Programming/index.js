@@ -6,7 +6,7 @@ class Programming extends React.Component {
 
     render() {
         return(
-            <div className="mainprogramming poppinsfont" >
+            <div className="mainprogramming poppinsfont">
                 <div className="contentprogramming">
                     <div>
                         <h1 className="h1poppins text-focus-in">Wijayanto Abdurrahman Prawirodirjo</h1>
@@ -16,7 +16,7 @@ class Programming extends React.Component {
                     <div className="contentactionprogramming scale-in-hor-right">
                         <a href="#" className="actionpoppins">Portfolio</a>
                         <a href="/aboutme" className="actionpoppins">About</a>
-                        <a href="https://blog.wijayantoap.now.sh/" className="actionpoppins catprogramming">Blog</a>
+                        <a href="/blogbutdontgonow" className="actionpoppins catprogramming">Blog</a>
                     </div>
                 </div>
             </div>
